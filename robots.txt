@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ahmadmifta2004-hub.github.io/soto-pak-yono/sitemap.xml
