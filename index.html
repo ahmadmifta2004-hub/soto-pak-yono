@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Warung Soto Kudus Pak Yono Jepara — Asli Daging Sapi Pilihan</title>
+  <meta name="description" content="Soto Kudus otentik daging sapi pilihan di Panggang, Jepara. Buka setiap hari 06.00 - 21.00 WIB. Nikmati kuah kaldu rempah bening gurih dan taburan bawang putih goreng melimpah.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Google Fonts: Plus Jakarta Sans & Playfair Display -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&display=swap" rel="stylesheet">
+  <!-- FontAwesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              gold: '#D97706',
+              goldLight: '#FBBF24',
+              goldDark: '#B45309',
+              dark: '#1C1917',
+              warm: '#FFFBEB',
+              emerald: '#059669',
+              wood: '#78350F'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            serif: ['"Playfair Display"', 'serif']
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    .hero-bg {
+      background: radial-gradient(circle at 10% 20%, rgba(217, 119, 6, 0.12) 0%, transparent 40%),
+                  radial-gradient(circle at 90% 80%, rgba(5, 150, 105, 0.08) 0%, transparent 40%),
+                  radial-gradient(circle at 50% 50%, rgba(251, 191, 36, 0.05) 0%, transparent 60%);
+    }
+    .glass-nav {
+      background: rgba(250, 248, 245, 0.85);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(217, 119, 6, 0.12);
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(217, 119, 6, 0.15);
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .glass-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(217, 119, 6, 0.4);
+      box-shadow: 0 20px 25px -5px rgba(217, 119, 6, 0.1), 0 8px 10px -6px rgba(217, 119, 6, 0.05);
+    }
+    @keyframes floatParticle {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-12px) rotate(8deg); }
+    }
+    .floating-leaf {
+      animation: floatParticle 6s ease-in-out infinite;
+    }
+    .floating-leaf-slow {
+      animation: floatParticle 8s ease-in-out infinite 2s;
+    }
+  </style>
+</head>
+<body class="bg-[#FAF8F5] text-stone-800 font-sans antialiased selection:bg-amber-500 selection:text-white">
+
+  <!-- TOP BAR STATUS -->
+  <div class="bg-gradient-to-r from-amber-700 via-amber-800 to-amber-700 text-amber-50 px-4 py-2 text-center text-xs sm:text-sm font-medium flex items-center justify-center gap-2 shadow-sm">
+    <span class="relative flex h-2 w-2">
+      <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+      <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-400"></span>
+    </span>
+    <span>Buka Setiap Hari: <strong>06.00 – 21.00 WIB</strong> (Sarapan, Makan Siang & Makan Malam)</span>
+  </div>
+
+  <!-- NAVBAR -->
+  <nav class="sticky top-0 z-50 glass-nav transition-all duration-300">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-12 h-12 rounded-2xl bg-gradient-to-tr from-amber-600 via-amber-500 to-amber-400 flex items-center justify-center text-white text-2xl shadow-lg shadow-amber-600/30 group-hover:scale-105 transition-transform">
+          <i class="fa-solid fa-bowl-food"></i>
+        </div>
+        <div>
+          <span class="font-serif text-xl sm:text-2xl font-extrabold tracking-tight text-stone-900 block leading-none">Soto Pak Yono</span>
+          <span class="text-[11px] font-bold text-amber-600 tracking-wider uppercase mt-1 block">Khas Kudus • Daging Sapi Jepara</span>
+        </div>
+      </a>
+
+      <!-- Desktop Links -->
+      <div class="hidden md:flex items-center gap-8 text-sm font-semibold text-stone-600">
+        <a href="#tentang" class="hover:text-amber-600 transition-colors">Cerita Rasa</a>
+        <a href="#menu" class="hover:text-amber-600 transition-colors">Menu & Lauk</a>
+        <a href="#testimoni" class="hover:text-amber-600 transition-colors">Ulasan</a>
+        <a href="#lokasi" class="hover:text-amber-600 transition-colors">Lokasi & Jam</a>
+      </div>
+
+      <a href="https://maps.google.com/?q=Soto+Kudus+Pak+Yono+Jalan+Ki+Mangunsarkoro+Panggang+Jepara" target="_blank" class="inline-flex items-center gap-2 bg-gradient-to-r from-amber-600 to-amber-500 hover:from-amber-700 hover:to-amber-600 text-white px-5 py-2.5 rounded-full font-bold text-xs sm:text-sm shadow-md shadow-amber-600/20 hover:shadow-lg hover:scale-105 transition-all duration-200">
+        <i class="fa-solid fa-diamond-turn-right text-xs"></i>
+        <span>Buka Rute Maps</span>
+      </a>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="relative overflow-hidden hero-bg pt-10 pb-20 lg:py-24">
+    <!-- Floating visual spices decorations -->
+    <div class="absolute top-12 left-8 text-amber-500/20 text-4xl floating-leaf select-none pointer-events-none hidden sm:block">
+      <i class="fa-solid fa-pepper-hot"></i>
+    </div>
+    <div class="absolute bottom-16 right-12 text-emerald-500/20 text-5xl floating-leaf-slow select-none pointer-events-none hidden sm:block">
+      <i class="fa-solid fa-leaf"></i>
+    </div>
+    <div class="absolute top-1/2 right-1/4 text-amber-600/10 text-6xl floating-leaf select-none pointer-events-none hidden sm:block">
+      <i class="fa-solid fa-bowl-rice"></i>
+    </div>
+
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Hero Text -->
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-amber-100/90 border border-amber-300/80 text-amber-900 text-xs sm:text-sm font-bold shadow-sm">
+            <i class="fa-solid fa-star text-amber-600"></i>
+            <span>Kuliner Hangat & Otentik di Pusat Jepara</span>
+          </div>
+          
+          <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-extrabold text-stone-900 tracking-tight leading-[1.12]">
+            Segarnya Kaldu Sapi Asli, Gurih Rempah <span class="text-amber-600 italic">Meresap Sempurna.</span>
+          </h1>
+
+          <p class="text-stone-600 text-base sm:text-lg max-w-xl mx-auto lg:mx-0 leading-relaxed">
+            Menghadirkan racikan autentik Soto Kudus dengan <strong>irisan daging sapi pilihan</strong>, kuah kaldu rempah bening gurih, dan taburan bawang putih goreng renyah melimpah yang siap menghangatkan harimu.
+          </p>
+
+          <div class="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+            <a href="https://maps.google.com/?q=Soto+Kudus+Pak+Yono+Jalan+Ki+Mangunsarkoro+Panggang+Jepara" target="_blank" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-amber-600 hover:bg-amber-700 text-white px-8 py-4 rounded-2xl font-bold text-base shadow-xl shadow-amber-600/30 hover:scale-[1.02] transition-all">
+              <i class="fa-solid fa-map-location-dot text-lg"></i>
+              <span>Petunjuk Rute Maps</span>
+            </a>
+            <a href="#menu" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white hover:bg-stone-50 border border-stone-300 text-stone-800 px-7 py-4 rounded-2xl font-bold text-base shadow-sm hover:border-amber-400 transition-all">
+              <i class="fa-solid fa-utensils text-amber-600"></i>
+              <span>Lihat Menu Lengkap</span>
+            </a>
+          </div>
+
+          <!-- Feature badges -->
+          <div class="grid grid-cols-3 gap-4 pt-6 border-t border-amber-200/80 max-w-md mx-auto lg:mx-0 text-center lg:text-left">
+            <div>
+              <p class="font-serif text-2xl sm:text-3xl font-extrabold text-amber-700">100%</p>
+              <p class="text-xs text-stone-500 font-semibold">Daging Sapi Asli</p>
+            </div>
+            <div>
+              <p class="font-serif text-2xl sm:text-3xl font-extrabold text-amber-700">06.00-21.00</p>
+              <p class="text-xs text-stone-500 font-semibold">Buka Sampai Malam</p>
+            </div>
+            <div>
+              <p class="font-serif text-2xl sm:text-3xl font-extrabold text-amber-700">4.9 ★</p>
+              <p class="text-xs text-stone-500 font-semibold">Kepuasan Rasa</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Card Frame -->
+        <div class="lg:col-span-5 relative">
+          <div class="relative mx-auto max-w-md">
+            <!-- Decorative Backdrops -->
+            <div class="absolute -top-6 -left-6 w-72 h-72 bg-amber-400/25 rounded-full blur-3xl"></div>
+            <div class="absolute -bottom-6 -right-6 w-72 h-72 bg-emerald-400/20 rounded-full blur-3xl"></div>
+
+            <div class="relative glass-card rounded-3xl p-6 sm:p-8 shadow-2xl space-y-6">
+              <div class="relative h-64 sm:h-72 rounded-2xl overflow-hidden bg-stone-900 flex items-center justify-center shadow-inner group">
+                <img src="https://images.unsplash.com/photo-1541832676-9b763b0239ab?auto=format&fit=crop&w=800&q=80" alt="Soto Kudus Daging Sapi Pak Yono" class="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+                
+                <div class="absolute top-4 right-4">
+                  <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-emerald-500/90 backdrop-blur-md text-white text-xs font-bold shadow-md">
+                    <i class="fa-solid fa-leaf"></i> Rempah Alami
+                  </span>
+                </div>
+
+                <div class="absolute bottom-4 left-4 right-4 text-white">
+                  <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-amber-500 text-stone-950 text-xs font-bold mb-1">
+                    <i class="fa-solid fa-fire"></i> Menu Utama
+                  </div>
+                  <h3 class="font-serif text-xl font-bold">Soto Kudus Daging Sapi</h3>
+                  <p class="text-xs text-stone-300">Porsi Standar Mangkuk Tradisional Jepara</p>
+                </div>
+              </div>
+
+              <!-- Quick Info Badge -->
+              <div class="bg-amber-50/90 rounded-2xl p-4 border border-amber-200 flex items-center gap-4 shadow-sm">
+                <div class="w-11 h-11 rounded-xl bg-amber-600 text-white flex items-center justify-center text-xl flex-shrink-0 shadow-sm">
+                  <i class="fa-solid fa-clock"></i>
+                </div>
+                <div>
+                  <h4 class="text-sm font-bold text-stone-900">Jam Operasional Panjang</h4>
+                  <p class="text-xs text-stone-600">06.00 – 21.00 WIB • Cocok Sarapan s/d Makan Malam</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- CERITA RASA / TENTANG KAMI -->
+  <section id="tentang" class="py-20 bg-white border-y border-stone-200/80">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        
+        <div class="space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 text-xs font-bold">
+            <i class="fa-solid fa-utensils"></i>
+            <span>Keistimewaan Resep Pak Yono</span>
+          </div>
+
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold text-stone-900 tracking-tight">
+            Kuah Bening Segar, Kaya Rempah, & Tanpa Santan Berlebih.
+          </h2>
+
+          <p class="text-stone-600 text-base leading-relaxed">
+            <strong>Warung Soto Kudus Pak Yono</strong> menyajikan kenikmatan soto berkarakter khas: kuah kaldu daging sapi murni yang dimasak perlahan bersama rempah-rempah tradisional Nusantara. Rasanya gurih ringan, segar di tenggorokan, dan tidak membuat begah di perut.
+          </p>
+
+          <div class="space-y-3.5 pt-2">
+            <div class="flex items-start gap-3">
+              <div class="w-6 h-6 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center text-xs flex-shrink-0 mt-0.5 font-bold">
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <p class="text-sm text-stone-700"><strong>Daging Sapi Pilihan Empuk:</strong> Dipotong pas dan lembut saat disantap bersama nasi hangat.</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-6 h-6 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center text-xs flex-shrink-0 mt-0.5 font-bold">
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <p class="text-sm text-stone-700"><strong>Aroma Bawang Putih Goreng Khas:</strong> Ditabur melimpah di atas mangkok untuk sensasi renyah dan harum.</p>
+            </div>
+            <div class="flex items-start gap-3">
+              <div class="w-6 h-6 rounded-full bg-amber-100 text-amber-700 flex items-center justify-center text-xs flex-shrink-0 mt-0.5 font-bold">
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <p class="text-sm text-stone-700"><strong>Racikan Pas di Meja:</strong> Nikmat ditambah perasan jeruk nipis segar, sambal rawit merah, dan kecap manis lokal.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Image Collage -->
+        <div class="grid grid-cols-2 gap-4">
+          <div class="space-y-4">
+            <div class="rounded-2xl overflow-hidden shadow-md h-48 bg-stone-100">
+              <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=500&q=80" alt="Kuah Kaldu Soto Hangat" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+            </div>
+            <div class="rounded-2xl overflow-hidden shadow-md h-56 bg-stone-100">
+              <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=500&q=80" alt="Bumbu Rempah Nusantara" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+            </div>
+          </div>
+          <div class="space-y-4 pt-6">
+            <div class="rounded-2xl overflow-hidden shadow-md h-56 bg-stone-100">
+              <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=500&q=80" alt="Suasana Meja Warung Makan" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+            </div>
+            <div class="rounded-2xl overflow-hidden shadow-md h-48 bg-stone-100">
+              <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=500&q=80" alt="Sajian Soto Daging Sapi Lezat" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- MENU SECTION -->
+  <section id="menu" class="py-20 bg-[#FAF8F5]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="text-center max-w-2xl mx-auto space-y-3 mb-16">
+        <span class="text-xs font-extrabold text-amber-600 uppercase tracking-widest block">Sajian Utama & Lauk Pilihan</span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-stone-900">Daftar Menu Warung Pak Yono</h2>
+        <p class="text-stone-600 text-sm sm:text-base">Setiap mangkuk disajikan hangat dan fresh dari kuali dengan cita rasa khas yang selalu bikin rindu.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8">
+        
+        <!-- Menu 1 -->
+        <div class="bg-white rounded-3xl p-6 shadow-xl shadow-stone-200/50 border border-stone-200/70 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="h-44 rounded-2xl overflow-hidden bg-amber-50 mb-6 relative">
+              <img src="https://images.unsplash.com/photo-1541832676-9b763b0239ab?auto=format&fit=crop&w=600&q=80" alt="Soto Daging Sapi" class="w-full h-full object-cover">
+              <span class="absolute top-3 left-3 bg-amber-600 text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">Favorit</span>
+            </div>
+            <div class="flex items-center justify-between gap-2 mb-2">
+              <h3 class="font-serif text-xl font-bold text-stone-900">Soto Kudus Daging Sapi</h3>
+              <span class="px-2.5 py-1 rounded-full bg-amber-100 text-amber-800 text-xs font-bold">Utama</span>
+            </div>
+            <p class="text-xs text-stone-600 leading-relaxed mb-4">
+              Nasi hangat berpadu suwiran daging sapi empuk, tauge segar, seledri, dan kuah kaldu rempah bening dengan taburan bawang putih goreng renyah.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-stone-100 flex items-center justify-between">
+            <span class="text-xs text-stone-500 font-medium">Mangkok Standar</span>
+            <span class="font-serif text-lg font-bold text-amber-700">Rp 15.000</span>
+          </div>
+        </div>
+
+        <!-- Menu 2 -->
+        <div class="bg-white rounded-3xl p-6 shadow-xl shadow-stone-200/50 border border-stone-200/70 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="h-44 rounded-2xl overflow-hidden bg-amber-50 mb-6 relative">
+              <img src="https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=600&q=80" alt="Sate Bacem & Lauk" class="w-full h-full object-cover">
+              <span class="absolute top-3 left-3 bg-emerald-600 text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">Legit</span>
+            </div>
+            <div class="flex items-center justify-between gap-2 mb-2">
+              <h3 class="font-serif text-xl font-bold text-stone-900">Aneka Sate Bacem & Lauk</h3>
+              <span class="px-2.5 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold">Pelengkap</span>
+            </div>
+            <p class="text-xs text-stone-600 leading-relaxed mb-4">
+              Pilihan sate telur puyuh bacem legit, sate paru gurih, perkedel kentang lembut, dan tempe mendoan hangat yang pas dicelup kuah soto.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-stone-100 flex items-center justify-between">
+            <span class="text-xs text-stone-500 font-medium">Mulai dari</span>
+            <span class="font-serif text-lg font-bold text-amber-700">Rp 3.000 / tusuk</span>
+          </div>
+        </div>
+
+        <!-- Menu 3 -->
+        <div class="bg-white rounded-3xl p-6 shadow-xl shadow-stone-200/50 border border-stone-200/70 hover:-translate-y-1.5 transition-all duration-300 flex flex-col justify-between">
+          <div>
+            <div class="h-44 rounded-2xl overflow-hidden bg-amber-50 mb-6 relative">
+              <img src="https://images.unsplash.com/photo-1556679343-c7306c1976bc?auto=format&fit=crop&w=600&q=80" alt="Minuman Segar" class="w-full h-full object-cover">
+              <span class="absolute top-3 left-3 bg-stone-800 text-white text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">Segar</span>
+            </div>
+            <div class="flex items-center justify-between gap-2 mb-2">
+              <h3 class="font-serif text-xl font-bold text-stone-900">Minuman Segar</h3>
+              <span class="px-2.5 py-1 rounded-full bg-stone-100 text-stone-800 text-xs font-bold">Pelepas Dahaga</span>
+            </div>
+            <p class="text-xs text-stone-600 leading-relaxed mb-4">
+              Es Teh Manis melati khas Jawa Tengah, Es Jeruk peras segar alami, dan Teh Hangat untuk menyempurnakan santapan Anda.
+            </p>
+          </div>
+          <div class="pt-4 border-t border-stone-100 flex items-center justify-between">
+            <span class="text-xs text-stone-500 font-medium">Mulai dari</span>
+            <span class="font-serif text-lg font-bold text-amber-700">Rp 4.000</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- TESTIMONI PELANGGAN -->
+  <section id="testimoni" class="py-16 bg-white border-t border-stone-200/80">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-xl mx-auto mb-12">
+        <span class="text-xs font-bold text-amber-600 uppercase tracking-widest block">Ulasan Pelanggan</span>
+        <h2 class="font-serif text-2xl sm:text-3xl font-bold text-stone-900 mt-1">Apa Kata Mereka yang Sudah Mampir?</h2>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="p-6 rounded-2xl bg-amber-50/50 border border-amber-200/60 shadow-sm space-y-3">
+          <div class="flex text-amber-500 text-xs gap-1">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="text-xs sm:text-sm text-stone-700 italic">"Kuahnya bener-bener seger dan daging sapinya empuk banget. Bawang gorengnya melimpah bikin nagih. Sarapan langganan keluarga!"</p>
+          <p class="text-xs font-bold text-stone-900">— Mas Dimas, Warga Panggang</p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-amber-50/50 border border-amber-200/60 shadow-sm space-y-3">
+          <div class="flex text-amber-500 text-xs gap-1">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="text-xs sm:text-sm text-stone-700 italic">"Tempatnya nyaman dan bersih. Pas banget mampir makan siang sebelum lanjut perjalanan wisata ke pantai. Sate puyuhnya juara!"</p>
+          <p class="text-xs font-bold text-stone-900">— Mbak Rina, Wisatawan Semarang</p>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-amber-50/50 border border-amber-200/60 shadow-sm space-y-3">
+          <div class="flex text-amber-500 text-xs gap-1">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p class="text-xs sm:text-sm text-stone-700 italic">"Enak karena buka sampai jam 9 malem! Kalau pulang kerja malem pengen yang anget-anget selalu mampir ke Pak Yono."</p>
+          <p class="text-xs font-bold text-stone-900">— Mas Andy, Jepara Kota</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOKASI & GOOGLE MAPS EMBED -->
+  <section id="lokasi" class="py-20 bg-stone-900 text-white relative overflow-hidden">
+    <!-- Decorative background glow -->
+    <div class="absolute top-0 right-0 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl"></div>
+
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Info Card -->
+        <div class="lg:col-span-5 space-y-6">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/20 border border-amber-500/30 text-amber-400 text-xs font-bold">
+            <i class="fa-solid fa-map-pin"></i>
+            <span>Lokasi Strategis di Pusat Jepara</span>
+          </div>
+
+          <h2 class="font-serif text-3xl sm:text-4xl font-bold tracking-tight text-white">
+            Kunjungi Warung Kami di Panggang, Jepara.
+          </h2>
+
+          <p class="text-stone-300 text-sm sm:text-base leading-relaxed">
+            Terletak strategis di jalur utama kota Jepara, sangat cocok disinggahi untuk sarapan santai, makan siang, maupun makan malam bersama rekan kerja dan keluarga.
+          </p>
+
+          <div class="space-y-4 pt-2">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-amber-600/30 border border-amber-500/40 text-amber-400 flex items-center justify-center text-lg flex-shrink-0">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div>
+                <h4 class="text-sm font-bold text-white">Alamat Lengkap</h4>
+                <p class="text-xs text-stone-300 mt-0.5">Jalan Ki Mangunsarkoro, Panggang, Jepara, Jawa Tengah</p>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-amber-600/30 border border-amber-500/40 text-amber-400 flex items-center justify-center text-lg flex-shrink-0">
+                <i class="fa-solid fa-clock"></i>
+              </div>
+              <div>
+                <h4 class="text-sm font-bold text-white">Jam Buka Lengkap</h4>
+                <p class="text-xs text-stone-300 mt-0.5">Setiap Hari: <strong>06.00 – 21.00 WIB</strong> (Makan Pagi s/d Malam)</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-4 flex flex-wrap gap-4">
+            <a href="https://maps.google.com/?q=Soto+Kudus+Pak+Yono+Jalan+Ki+Mangunsarkoro+Panggang+Jepara" target="_blank" class="inline-flex items-center gap-3 bg-amber-500 hover:bg-amber-600 text-stone-950 font-bold px-6 py-3.5 rounded-2xl text-sm shadow-lg shadow-amber-500/20 hover:scale-[1.02] transition-all">
+              <i class="fa-solid fa-diamond-turn-right text-base"></i>
+              <span>Buka Petunjuk Rute Maps</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Google Maps Embed Container -->
+        <div class="lg:col-span-7">
+          <div class="rounded-3xl overflow-hidden border border-stone-700 shadow-2xl bg-stone-800 relative h-80 sm:h-96">
+            <iframe 
+              title="Lokasi Soto Kudus Pak Yono Jepara"
+              src="https://www.google.com/maps?q=Jalan+Ki+Mangunsarkoro+Panggang+Jepara&output=embed"
+              class="w-full h-full border-0" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            
+            <div class="absolute bottom-4 right-4 bg-stone-900/90 backdrop-blur-md px-4 py-2 rounded-xl border border-stone-700 text-xs font-medium text-stone-300">
+              <a href="https://maps.google.com/?q=Soto+Kudus+Pak+Yono+Jalan+Ki+Mangunsarkoro+Panggang+Jepara" target="_blank" class="hover:text-amber-400 flex items-center gap-1.5">
+                <span>Buka Aplikasi Google Maps</span>
+                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-stone-950 text-stone-400 py-12 border-t border-stone-800">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-xl bg-amber-600/30 text-amber-500 flex items-center justify-center text-xl">
+          <i class="fa-solid fa-bowl-food"></i>
+        </div>
+        <div>
+          <p class="font-serif font-bold text-white text-base">Warung Soto Kudus Pak Yono</p>
+          <p class="text-xs text-stone-400">Jalan Ki Mangunsarkoro, Panggang, Jepara</p>
+        </div>
+      </div>
+
+      <p class="text-xs text-stone-400">
+        © 2026 Soto Kudus Pak Yono. Dikelola oleh Ty & didesain dengan cinta oleh Mimi & Eliie Valentine. ❤️
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>
